@@ -1,0 +1,22 @@
+@import 'modern-normalize/modern-normalize.css';
+@import './reset.module.css';
+@import './fonts.module.css';
+
+:root {
+  --background-color: #ebd5b3;
+  --main-font: "Bad Script", sans-serif;
+  --secondary-font: "Caveat", sans-serif;
+  --font-color: #204ac8;
+  --accent-color: #ac3235;
+  --transition-delay: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--main-font);
+  color: var(--font-color);
+}
+
+input {
+  font-family: var(--secondary-font);
+}

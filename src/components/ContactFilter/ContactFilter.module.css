@@ -1,0 +1,24 @@
+.label {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 34px;
+}
+
+.input {
+  width: 100%;
+  padding: 2px 20px;
+  border: 2px solid;
+  border-radius: 6px;
+  border-color: var(--font-color);
+  outline: none;
+  font-size: 24px;
+}
+
+.input:focus {
+  border-color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+
+}

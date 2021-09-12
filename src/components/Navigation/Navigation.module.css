@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: top;
+  padding: 12px 0 6px 0;
+}
+
+.link {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--font-color);
+  transition: fill var(--transition-delay), color var(--transition-delay);
+}
+
+.link:not(:last-child) {
+  margin-right: 16px;
+}
+
+.link.logoLink {
+  margin-right: 8px;
+}
+
+.link:not(.logoLink)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%) scaleX(0%);
+  transition: transform var(--transition-delay);
+}
+
+.activeLink:not(.logoLink)::after {
+  transform: translateX(0%) scaleX(100%);
+}
+
+.link:hover {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}

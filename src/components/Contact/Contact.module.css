@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  transition: fill var(--transition-delay);
+}
+
+.deleteButton:hover > .deleteIcon,
+.deleteButton:focus > .deleteIcon {
+  fill: var(--accent-color);
+}

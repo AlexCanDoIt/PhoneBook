@@ -1,0 +1,89 @@
+.container {
+  padding: 40px 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.labelText {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  transition: transform var(--transition-delay);
+}
+
+.input {
+  width: 100%;
+  padding: 2px 20px;
+  border: 2px solid;
+  border-radius: 6px;
+  border-color: var(--font-color);
+  outline: none;
+  font-size: 24px;
+}
+
+.input:focus + .labelText {
+  color: var(--accent-color);
+  transform: translate(-18px, -36px);
+}
+
+.input:not(:placeholder-shown) + .labelText {
+    transform: translate(-18px, -36px);
+}
+
+.input:focus {
+  border-color: var(--accent-color);
+}
+
+.button {
+  width: 60px;
+  height: 34px;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 6px;
+  border-color: var(--font-color);
+  font-weight: 700;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: box-shadow var(--transition-delay), font-size var(--transition-delay);
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: inset 0px 0px 4px 1px #204ac8a4;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .button {
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .button:hover,
+  .button:focus {
+    box-shadow: inset 0px 0px 4px 2px #204ac8a4;
+    font-size: 23px;
+  }
+}
